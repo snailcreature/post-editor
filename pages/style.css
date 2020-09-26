@@ -1,0 +1,27 @@
+section    {
+    display: grid;
+    width: 50vw;
+}
+
+#post-div   {
+    display: grid;
+}
+
+#render {
+    width: 45vw;
+    height: 95vh;
+    background: #eee;
+}
+
+body   {
+    display: flex;
+}
+
+input   {
+    width: 20em;
+    margin: 0 0 0 1em;
+}
+
+textarea    {
+    width: 80%;
+}
