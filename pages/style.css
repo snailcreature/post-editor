@@ -1,6 +1,15 @@
+*   {
+    font-family: sans-serif;
+}
+
+div {
+    padding: 0 0 .25em 0;
+}
+
 section    {
     display: grid;
     width: 50vw;
+    height: 100%;
 }
 
 #post-div   {
@@ -9,12 +18,18 @@ section    {
 
 #render {
     width: 45vw;
-    height: 95vh;
+    height: 90vh;
     background: #eee;
     overflow: scroll;
+    border: solid #aaa .25em;
+    padding: .25em;
 }
 
-body   {
+#render > * {
+    padding: 0;
+}
+
+#main-frame   {
     display: flex;
 }
 
@@ -25,5 +40,8 @@ input   {
 
 textarea    {
     width: 80%;
+    height: 80%;
     overflow: scroll;
+    resize: none;
 }
+
