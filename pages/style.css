@@ -11,6 +11,7 @@ section    {
     width: 45vw;
     height: 95vh;
     background: #eee;
+    overflow: scroll;
 }
 
 body   {
@@ -24,4 +25,5 @@ input   {
 
 textarea    {
     width: 80%;
+    overflow: scroll;
 }
