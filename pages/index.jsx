@@ -6,9 +6,10 @@ function parseMD()    {
     let author = document.querySelector("#author-input").value;
     let date = document.querySelector("#date-input").value;
     let body = document.querySelector("#post-markdown").value;
-    let text = `# ${title} \n### ${author} | ${date}\n${body}`
+    let text = `#${title || 'Add a Title'} \n\n### ${author || 'Add an author'} | ${date || 'Add a date'}\n\n${body || 'Add some text to the post...'}`
     let converter = new Showdown.Converter();
     document.querySelector("#render").innerHTML = converter.makeHtml(text);
+    console.log(converter.makeHtml(text));
 }
 
 function HomePage() {
@@ -35,7 +36,13 @@ function HomePage() {
                     <textarea name="post" id="post-markdown" cols="30" rows="40" onChange={parseMD}></textarea>
                 </div>
             </section>
-            <section id="render-section"><article id="render"></article></section>
+            <section id="render-section">
+                <article id="render">
+                    <h1 id="addatitle">Add a Title</h1>
+                    <h3 id="addanauthoraddadate">Add an author | Add a date</h3>
+                    <p>Add some text to the post…</p>
+                </article>
+                </section>
         </div>
     );
 }
