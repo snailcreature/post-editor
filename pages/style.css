@@ -14,6 +14,7 @@ section    {
 
 #post-div   {
     display: grid;
+    height: 60vh;
 }
 
 #render {
@@ -40,7 +41,7 @@ input   {
 
 textarea    {
     width: 80%;
-    height: 80%;
+    height: 100%;
     overflow: scroll;
     resize: none;
 }
