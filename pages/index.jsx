@@ -34,7 +34,7 @@ function parseMD()    {
 async function saveJson() {
     let md = getMarkdown();
     let fileName = `${md.date.replaceAll(' ', '_').replaceAll('-', '_').toLowerCase() || 'date'}_${md.title.replaceAll(' ', '-').replaceAll('-', '_').toLowerCase() || 'title'}`
-    let out = `const post_${fileName} = ${JSON.stringify(md)};\n\nexport default post;`;
+    let out = `const post_${fileName} = ${JSON.stringify(md)};\n\nexport default ${fileName};`;
     let blob = await new Blob([out], {type: "text/javascript;charset=utf-8"});
     saveAs(blob, `${fileName}.js`);
 }
