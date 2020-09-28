@@ -19,3 +19,4 @@ Planned features include:
  - Mobile view support
  - An open button
  - Dark mode
+ - Page content links
